@@ -1,17 +1,243 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fcf9f3" />
     <title>暮岁芳华 - 一站式适老服务平台</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="phone-shell">
+      <main class="screen-stack">
+        <section class="screen is-active" id="screen-home" aria-label="首页">
+          <div class="soft-bg"></div>
+          <header class="topbar home-topbar">
+            <div>
+              <h1>早上好，李爷爷 <span class="wave">👋</span></h1>
+              <p>愿您今天心情舒畅，事事顺心！</p>
+            </div>
+            <img class="avatar large" alt="老人头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpnbrg56dbU-8SRzeTzQ4B9QcyKq51rYNWHalKZUhx5pStjcTPeRZnXAUvGHkeZedcFszkyBwuQkReLmlvzfwHVMPHhed9MMjwXMWf9ozXujNsryrjKLpMkcfBLdJPSAFz9XBkvnOrHa3v_dVvfSd0vY1aDeKPvGs5l_K8rpOx1Iuv64GNsyuKS_mz-t4urpIW-gGBvtzSJ8g6VzyUklH6dfAQ6vdoDKNpxVcaZKSly_0BmeIqoBaD8NM2HafjMfvm4UfSzwLi6w" />
+          </header>
+
+          <div class="content">
+            <article class="weather-card card">
+              <div class="weather-left">
+                <span class="icon-bubble amber material-symbols-outlined fill">partly_cloudy_day</span>
+                <div>
+                  <div class="weather-line"><strong>18℃</strong><span>多云转晴</span></div>
+                  <span class="pill green">空气优 32</span>
+                </div>
+              </div>
+              <div class="date-block">
+                <strong>5月18日 周日</strong>
+                <span>四月廿一</span>
+              </div>
+            </article>
+
+            <article class="medicine-card">
+              <span class="ghost-icon material-symbols-outlined fill">pill</span>
+              <div class="card-title danger">
+                <span class="material-symbols-outlined fill">notifications_active</span>
+                <strong>用药提醒</strong>
+                <span class="material-symbols-outlined">chevron_right</span>
+              </div>
+              <div class="medicine-row">
+                <strong>08:30</strong>
+                <div>
+                  <b>降压片 <span>1片</span></b>
+                  <p>每天 08:30 服用</p>
+                </div>
+              </div>
+              <button class="primary-btn danger-bg">
+                <span class="material-symbols-outlined fill">home_health</span>
+                我已服药
+              </button>
+            </article>
+
+            <article class="card">
+              <div class="section-head">
+                <h2>今日健康概览</h2>
+                <button class="text-link">查看详情 <span class="material-symbols-outlined">chevron_right</span></button>
+              </div>
+              <div class="metric-strip">
+                <div><span>血压</span><strong>128/78</strong><small>mmHg</small></div>
+                <div><span>心率</span><strong>76</strong><small>次/分</small></div>
+                <div><span>步数</span><strong class="green-text">3520</strong><small>步</small></div>
+              </div>
+              <p class="timestamp">数据来自 05-18 07:30</p>
+            </article>
+
+            <section>
+              <h2 class="section-label">快捷服务</h2>
+              <div class="quick-grid">
+                <button class="quick-item">
+                  <span class="sos-small">SOS</span>
+                  <b>一键呼救</b>
+                </button>
+                <button class="quick-item">
+                  <span class="quick-icon green material-symbols-outlined fill">diversity_3</span>
+                  <b>联系家人</b>
+                </button>
+                <button class="quick-item">
+                  <span class="quick-icon amber material-symbols-outlined fill">local_taxi</span>
+                  <b>叫车出行</b>
+                </button>
+                <button class="quick-item">
+                  <span class="quick-icon dark material-symbols-outlined fill">mic</span>
+                  <b>语音助手</b>
+                </button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-health" aria-label="健康">
+          <header class="topbar">
+            <div class="profile-title">
+              <img class="avatar" alt="老人头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiGefWqXtDQWO9NCho43ug8ggKC_TuAGdRvFI2UoXv8x0NKtjZzFx3Ry7J0bTZlglwXwZrpvc0zx16Zf4OE7hAXfS_GEJ1tXQh86E5ceJHJWx4c0wGWmd6-W1GtmwmtmKmy1T6O0uTdB1uTT0r3ZXzEjlUxrQ42YFkVgN5U_KRzdcVbbzbJEESEA6BJOqpk9rCARCOkjJwbt2GRw8StyJM_7IfEVHjomBLbE_pqI6DVmuZu4MEtvUgrKtwbvF4sAN59Lhvji2-1Q" />
+              <div>
+                <h1>早上好，张爷爷</h1>
+                <p>关注健康，享受美好每一天</p>
+              </div>
+            </div>
+            <button class="icon-button"><span class="material-symbols-outlined">settings_voice</span></button>
+          </header>
+          <div class="content">
+            <div class="sos-wrap">
+              <button class="sos-button">
+                <span class="material-symbols-outlined fill">favorite</span>
+                <strong>SOS</strong>
+                <small>一键呼救</small>
+              </button>
+            </div>
+            <article class="card score-card">
+              <div class="section-head">
+                <h2>本周健康评分</h2>
+                <span class="score-ring">85<small>分</small></span>
+              </div>
+              <p><strong>良好</strong><span class="pill green">比上周 ↑ 5分</span></p>
+            </article>
+            <div class="health-grid">
+              <article class="mini-card"><span class="material-symbols-outlined fill red">water_drop</span><div><small>血压</small><strong>128/78 <em>mmHg</em></strong></div></article>
+              <article class="mini-card"><span class="material-symbols-outlined fill amber-text">opacity</span><div><small>血糖</small><strong>6.2 <em>mmol/L</em></strong></div></article>
+              <article class="mini-card"><span class="material-symbols-outlined fill red">favorite</span><div><small>心率</small><strong>72 <em>次/分</em></strong></div></article>
+              <article class="mini-card"><span class="material-symbols-outlined fill violet">bedtime</span><div><small>睡眠</small><strong>7.2 <em>小时</em></strong></div></article>
+            </div>
+            <article class="card">
+              <div class="section-head">
+                <h2>今日用药计划</h2>
+                <button class="text-link">用药记录 <span class="material-symbols-outlined">chevron_right</span></button>
+              </div>
+              <div class="med-plan done"><time>早晨<br><small>08:00</small></time><div><strong>降压片 5mg</strong><span>1片 口服</span></div><b>已服用</b></div>
+              <div class="med-plan pending"><time>中午<br><small>12:00</small></time><div><strong>降糖片 50mg</strong><span>1片 口服</span></div><b>待服用</b></div>
+            </article>
+            <article class="doctor-card">
+              <div>
+                <h2>在线问诊</h2>
+                <p>专业医生在线解答健康问题</p>
+                <button>去问诊 <span class="material-symbols-outlined">arrow_forward</span></button>
+              </div>
+              <img alt="医生头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVqBkEEg4RgxCxJEp6LwheLWhapHUXgAT5M_mUH1PsWm-b3pJd3HPu4bOcex-QSjOUvWsO4JCeU_B4rwb4BCJqaVZPJx5m7CjPnHmvpG3yK_tUh7IgC3L1cyfu-vfq5YtqA55VRbxkz7T2xGT28v3T8m_u0FVjmDuHngE1Ealw5d5jBEGLbmZ-qZtPuIZvepY-ae-40WRgqFUftqFQ3Q5voSpzlZGNW5tL4Va7r7vI7l4iqjET4ME8vzel3oEth3bym_nJ6TpFPg" />
+            </article>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-life" aria-label="生活">
+          <header class="topbar">
+            <div class="profile-title">
+              <span class="material-symbols-outlined fill green-text">location_on</span>
+              <div><h1>便捷生活</h1><p>北京市 · 朝阳区</p></div>
+            </div>
+            <button class="icon-button"><span class="material-symbols-outlined">settings</span></button>
+          </header>
+          <div class="content">
+            <div class="service-grid">
+              <button><b>本地便民</b><span>办事咨询<br>邻里互助</span><i class="material-symbols-outlined">storefront</i></button>
+              <button><b>生活服务</b><span>家政保洁<br>维修服务</span><i class="material-symbols-outlined">cleaning_services</i></button>
+              <button><b>志愿服务</b><span>爱心陪伴<br>帮扶关怀</span><i class="material-symbols-outlined">volunteer_activism</i></button>
+              <button><b>便捷支付</b><span>水电燃气<br>话费充值</span><i class="material-symbols-outlined">account_balance_wallet</i></button>
+            </div>
+            <section>
+              <h2 class="section-label">为您推荐</h2>
+              <article class="list-card"><img alt="上门理发" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfqO9UOiGU4RD0mKgsiNvMPvc3hplPlapI8Ng6pEWRWAv-uVDYDXYS6h45XNSvdGcO0lZ76ZkvqJ9cvMP-m9CUBwlnz_8NvNqu6GGJo3bjm_8HnH2aX03KBt8lsd66W6Gtsqv-dmyRYs-f-A1FP00Vuc0A5TIEqc8f084PV8IeSHxibZVgTEfrKmOcNb4WaFiy78hwE6PKxiceV8Htu2hMYQSFSJoRV09G1_BFGqMVxIlFw4rdvIrvU8-oxyST2pmCaoiMqo1kPg"><div><h3>上门理发</h3><p>专业理发师上门服务，清爽舒适</p></div><span class="material-symbols-outlined">chevron_right</span></article>
+              <article class="list-card"><img alt="上门沐浴" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM2aD0j9JtZMWfQuLl2NqN1ytXhcTSZ2Q8y9eB_fLJOw_69IukH7Q-heBGe5hz8-V1_EXbiqvtJuCw_7GxxyrTUiAGZUThStgs53ORtNSj44ZBaUm33tG44zyEkqOvVRapaCjNrQms770ZACvb_vCNpgh_Z-DfzqlW4uENnvvmTEG3AWLNyAtSF2xOAZmKSDY4PJsq6-F1K5eGqEfR9JDph-5NYaXsuD-H2HyfAlW4o0DpMti7EoteyiZnt5KU5P1mkENc32Eeiw"><div><h3>上门沐浴</h3><p>助浴服务，安全贴心</p></div><span class="material-symbols-outlined">chevron_right</span></article>
+            </section>
+            <article class="map-card">
+              <div><span class="material-symbols-outlined">map</span><strong>便捷出行地图</strong><p>周边设施一目了然</p></div>
+            </article>
+            <button class="floating-car"><span class="material-symbols-outlined fill">directions_car</span></button>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-social" aria-label="社交">
+          <header class="topbar">
+            <div class="profile-title"><span class="material-symbols-outlined green-text">group</span><div><h1>暮岁社交</h1><p>社区活动与老年大学</p></div></div>
+            <button class="icon-button"><span class="material-symbols-outlined">wb_sunny</span></button>
+          </header>
+          <div class="content">
+            <nav class="segmented"><button class="active">社区活动</button><button>老年大学</button></nav>
+            <section>
+              <div class="section-head"><h2>活动推荐</h2><button class="text-link">更多活动 <span class="material-symbols-outlined">chevron_right</span></button></div>
+              <article class="activity-card"><div><h3>重阳敬老联欢会</h3><p><span class="material-symbols-outlined">schedule</span>10月20日 09:30</p><p><span class="material-symbols-outlined">location_on</span>社区活动中心</p></div><b>报名中</b><footer><span>32人已报名</span></footer></article>
+              <article class="activity-card"><div><h3>秋季健康义诊</h3><p><span class="material-symbols-outlined">schedule</span>10月25日 08:30</p><p><span class="material-symbols-outlined">location_on</span>社区卫生服务站</p></div><b>报名中</b><footer><span>28人已报名</span></footer></article>
+            </section>
+            <section>
+              <h2 class="section-label">老年大学课程</h2>
+              <div class="course-grid">
+                <article><h3>书法课</h3><p>每周二 09:00<br>墨香修心</p><button>报名</button><span class="material-symbols-outlined">brush</span></article>
+                <article><h3>智能手机课</h3><p>每周四 09:00<br>玩转智能生活</p><button>报名</button><span class="material-symbols-outlined">smartphone</span></article>
+                <article><h3>健身课</h3><p>每周一 08:30<br>科学运动</p><button>报名</button><span class="material-symbols-outlined">fitness_center</span></article>
+                <article><h3>健康讲座</h3><p>每周六 10:00<br>健康与生活</p><button>报名</button><span class="material-symbols-outlined">record_voice_over</span></article>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-mine" aria-label="我的">
+          <header class="topbar">
+            <div class="profile-title">
+              <img class="avatar" alt="老人头像" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnLVhIhueoCAAEeECy5SbTE5B-rpFEhQ1vqLlkHPxK7MKKl8iPC_aVgGTrI0sWFrX_MUy7-jEIjDTyopRlSLwHhfV55bG0HXrNdcEJ3h19dkVDWzBQZkZVpN23u8Km4NLE3je2omSuRhCQtGUwNCjMyMxd2PUUjWb43zr0pFM1hchS6hP2BCEmGtDA8C7Yt7jPL8B1xBaEaIFjcUZWosrMFR5xh0b59Kx2cjWLTgmHLkrw21AcnJfCb9mjb-mG6-BRVFYPv8aw6w" />
+              <div><h1>张妈妈 <span class="tag">本人</span></h1><p>72岁</p></div>
+            </div>
+            <button class="icon-button notify"><span class="material-symbols-outlined">notifications</span></button>
+          </header>
+          <div class="content">
+            <section>
+              <div class="section-head"><h2>今日健康概览</h2><span class="muted">10:30 更新</span></div>
+              <div class="health-grid">
+                <article class="stat-card"><span class="material-symbols-outlined fill red">favorite</span><small>心率</small><strong>68</strong><em>正常</em></article>
+                <article class="stat-card"><span class="material-symbols-outlined fill amber-text">blood_pressure</span><small>血压</small><strong>128/78</strong><em>正常</em></article>
+                <article class="stat-card"><span class="material-symbols-outlined fill blue">water_drop</span><small>血氧</small><strong>98%</strong><em>正常</em></article>
+                <article class="stat-card"><span class="material-symbols-outlined fill green-text">directions_walk</span><small>步数</small><strong>1826</strong><em>适中</em></article>
+              </div>
+            </section>
+            <article class="safety-card"><span class="material-symbols-outlined fill">security</span><div><h3>安全状态</h3><p>居家 · 安全围栏内</p></div><b>全部正常</b></article>
+            <section>
+              <h2 class="section-label">快捷操作</h2>
+              <div class="action-grid">
+                <button><span class="material-symbols-outlined">videocam</span>视频通话</button>
+                <button><span class="material-symbols-outlined">local_mall</span>代订服务</button>
+                <button><span class="material-symbols-outlined">insert_chart</span>查看周报</button>
+                <button><span class="material-symbols-outlined">settings</span>提醒设置</button>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="底部导航">
+        <button class="active" data-screen="home"><span class="material-symbols-outlined fill">home</span><b>首页</b></button>
+        <button data-screen="health"><span class="material-symbols-outlined">medical_services</span><b>健康</b></button>
+        <button data-screen="life"><span class="material-symbols-outlined">local_mall</span><b>生活</b></button>
+        <button data-screen="social"><span class="material-symbols-outlined">group</span><b>社交</b></button>
+        <button data-screen="mine"><span class="material-symbols-outlined">person</span><b>我的</b></button>
+      </nav>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>
-
